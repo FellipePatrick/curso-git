@@ -1,0 +1,23 @@
+mkdir git
+cd git
+git init
+
+echo "Primeiro arquivo" > arquivo1.txt
+echo "Segundo arquivo" > arquivo2.txt
+echo "Terceiro arquivo" > arquivo3.txt
+git add .
+git commit -m "Adicionando arquivos"
+
+echo "Alteração no arquivo 1" >> arquivo1.txt
+echo "Alteração no arquivo 2" >> arquivo2.txt
+git status
+git diff
+git add .
+git commit -m "Alterando arquivo 1 e 2"
+
+git log
+git log --oneline
+git log --graph --all --decorate
+
+git revert HEAD
+
