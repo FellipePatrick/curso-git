@@ -21,3 +21,18 @@ git log --graph --all --decorate
 
 git revert HEAD
 
+echo "Nova modificação temporária" >> arquivo3.txt
+git stash
+git checkout -b nova-branch
+git checkout master
+git stash pop
+
+git reflog
+
+git tag -a v1.0 -m "Versão estável inicial" 870ec3b
+git remote add origin v1.0 https://github.com/FellipePatrick/curso-git.git
+git push origin v1.0
+
+git add comandos.txt
+git commit -m "Adicionado comandos.txt"
+git push origin master
